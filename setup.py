@@ -6,7 +6,7 @@ def get_requirements (file_path:str)->List[str]:
     requirements = []
     with open(file_path) as f:
         requirements = f.readline()
-        requirements = [reg.replace("\n","")for req in requirements]
+        requirements = [req.replace("\n","")for req in requirements]
 
         if HYPEN_E_DOT  in requirements:
             requirements.remove(HYPEN_E_DOT)
@@ -17,12 +17,11 @@ with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()     
    
 
-__version__ = "0.0.5"
+__version__ = "0.0.4"
 REPO_NAME = "mongodbconnectorpkg"
 PKG_NAME= "databaseautomation"
 AUTHOR_USER_NAME = "sadhanajarag"
 AUTHOR_EMAIL = "sadhana20.jarag@gmail.com"
-
 setup(
     name=PKG_NAME,
     version=__version__,

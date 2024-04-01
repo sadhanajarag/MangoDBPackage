@@ -7,12 +7,13 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 __version__ = "0.0.4"
 REPO_NAME = "MangoDBPackage"
-PKG_NAME= "database_automation"
+PKG_NAME= "database_automation_1" #Pypi package
 AUTHOR_USER_NAME = "sadhanajarag"
 AUTHOR_EMAIL = "sadhana20.jarag@gmail.com"
 
+#Git hub information
 setup(
-    name=PKG_NAME,
+    name=PKG_NAME, # the packange exist in git hub
     version=__version__,
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
@@ -25,3 +26,5 @@ setup(
     },
     package_dir={"": "src"},
     packages=find_packages(where="src"),)
+    #install_requires = get_requirment("./requirements_dev.txt")
+    #["pymongo","pymongo[srv]","dnspython","pandas","numpy","ensure","pytest"] )
